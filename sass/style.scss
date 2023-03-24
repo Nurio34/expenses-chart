@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+@import 'base/reset';
+
+@import 'abstracts/variable';
+@import 'abstracts/function';
+@import 'abstracts/mixin';
+
+@import 'base/typography';
+
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/main-chart';
+@import 'layout/main-summary';
+@import 'layout/footer';
+
+
+
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/dropdown';
+
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/home';
+
+@import 'theme/admin';
+@import 'theme/darktheme';
+@import 'theme/theme';
+
+@import 'queries/min750px/body';
+
+
+@import 'vendors/bootstrap';
+
+    
+

@@ -1,0 +1,64 @@
+
+main {
+    @include color (unset, $clr-6) ;
+    @include pd-bl ($pd-1*1.2 , $pd-1*1.2 ) ;
+    @include mg-bl ($pd-1 , 0) ;
+    border-radius: $br-1;
+    .heading {
+        @include mg-in( $pd-1, $pd-1) ;
+    }
+    .chart {
+        @include width (unset, 26vh) ;
+        @include mg-in($pd-1 , $pd-1) ;
+        @include grid-2 ;
+            align-items: flex-end;
+            gap:$pd-1 ;
+        @include pd-bl (0, $pd-1) ;
+        border-bottom: 3px solid $clr-41;
+        .days{
+            .indicator {
+                @include width (100%, var(--height)) ;
+                @include color (unset, $clr-1) ;
+                @include border (unset,unset,unset,$br-1*0.3) ;
+                position: relative;
+                cursor: pointer;
+
+                .amount{
+                    @include color($clr-6,$clr-3) ;
+                    @include font(inherit,$fs-1*0.8,$fw-2) ;
+                    border-radius: $br-1*0.3;
+                    line-height: 1;
+                    text-align: center;
+
+                    display: none;
+                    width: 120%;
+                    min-width: max-content;
+
+                    padding: $pd-1*0.4 $pd-1*0.3;
+                    
+                    position: absolute;
+                    left : -0.5rem ; 
+                    top : -2rem ;
+                }
+
+                &:hover {
+                    background-color: $clr-11 ;
+                }
+                &:hover .amount {
+                    display: block ;
+                }
+            }
+            .day {
+                @include color($clr-4,unset) ;
+                @include font(inherit,$fs-1*0.7,$fw-1) ;
+            }
+            .the-day {
+                background-color: $clr-2;
+
+                &:hover {
+                    background-color: $clr-22 ;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@media (min-width:750px) {
+    body {
+        padding:unset;
+        display: grid;
+        place-content: center;
+
+        .container {
+            width: min(540px, 50vw);
+        }
+    }
+}

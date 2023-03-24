@@ -1,0 +1,6 @@
+body {
+    padding-block-start: 4.4rem;
+    padding-inline: $pd-1 ;
+    @include color (unset,$clr-5) ;
+    @include font ($ff-1,unset,unset) ;
+}

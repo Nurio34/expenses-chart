@@ -1,0 +1,75 @@
+
+@mixin width ( $wd, $hgt ) {
+    width : $wd ;
+    height : $hgt ; 
+}
+
+@mixin color ( $clr , $bg-clr ) {
+    color : $clr ;
+    background-color : $bg-clr ;
+}
+
+@mixin font ( $ff , $fs , $fw ) {
+    font : {
+        family : $ff ;
+        size : $fs;
+        weight : $fw ;
+    }
+}
+
+@mixin border ( $bw , $bs , $bc , $br ) {
+    border : $bw $bs $bc ;
+    border-radius : $br ;
+}
+
+@mixin pd-in ($str, $end) {
+    padding-inline: $str $end;
+}
+@mixin pd-bl ($str,$end) {
+    padding-block: $str $end;
+}
+@mixin mg-in ($str, $end) {
+    margin-inline: $str $end;
+}
+@mixin mg-bl ($str,$end) {
+    margin-block: $str $end;
+}
+
+@mixin grid-1 {
+    display: grid ;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: 
+    "i-1 i-3"
+    "i-2 i-3";
+}
+@mixin grid-2 {
+    display: grid ;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-areas: 
+    "i-1 i-2 i-3 i-4 i-5 i-6 i-7";
+}
+@mixin grid-item ( $area ) {
+    grid-area: $area;
+}
+
+@mixin triangle ( $size , $clr , $direction ) {
+    width : 0 ;
+    height: 0 ;
+    border : $size/2 solid transparent ;
+
+    @if $direction == up {
+        border-bottom-color: $clr ;
+    }
+    @else if $direction == right {
+        border-left-color:  $clr;
+    }
+    @else if $direction == down {
+        border-top-color: $clr ;
+    }
+    @else if $direction == left {
+        border-right-color: $clr ;
+    }
+    @else {
+        @error "Unkonwn #{$direction}"
+    }
+}

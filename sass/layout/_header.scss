@@ -1,0 +1,21 @@
+header {
+    @include color (unset,$clr-1) ;
+    @include border ( unset,unset,unset,$br-1) ;
+    @include grid-1 ;
+    padding: $pd-1;
+    h1{
+        @include color ($clr-5,unset) ;
+        @include font (inherit, $fs-1, $fw-1) ;
+        @include grid-item (i-1) ;
+    }
+    p{
+        @include color ($clr-6, unset) ;
+        @include font (unset, $fs-1*1.4 , $fw-2) ;
+        @include grid-item (i-2) ;
+    }
+    svg{
+        @include grid-item (i-3) ;
+            justify-self: flex-end;
+            align-self: center;
+    }
+}
